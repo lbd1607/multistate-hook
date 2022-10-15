@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-wrapper {
+  display: grid; 
+  justify-content: center; 
+  margin: 5rem ;
+}
+
+.selection-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr 1fr;
+  place-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.label {
+  display: flex;
+  justify-self: start;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: flex;
+  justify-self: end;
+}
+
+.btn-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr 1fr;
+  justify-content: space-between;
+  place-items: center;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+
+.btn {
+  background-color: #222;
+  color: white;
+  font-size: 12pt;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn.reset {
+  background-color: #222;
+}
+
+.btn.submit {
+  background-color: seagreen;
+}
+
