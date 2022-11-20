@@ -1,12 +1,7 @@
 import React from "react";
 import TextInput from "./Input";
-import SearchableDropdown from "./SearchableDropdown";
+import SearchableDropdown, { ValueLabelPair } from "./SearchableDropdown";
 import useMultistate from "./useMultistate";
-
-export type ValueLabelPair = {
-  value: string;
-  label: string;
-};
 
 const BREADS = [
   { value: "White", label: "White" },
@@ -34,7 +29,7 @@ const VEGETABLES = [
   { value: "Onion", label: "Onion" },
 ];
 
-export const categories = {
+const categories = {
   breads: { fieldLabel: "Bread", options: BREADS },
   meats: { fieldLabel: "Meat", options: MEATS },
   plantBasedEntrees: {
@@ -46,7 +41,7 @@ export const categories = {
   name: "",
 };
 
-export const emptySelection = { value: "", label: "" };
+const emptySelection = { value: "", label: "" };
 
 const Form = () => {
   const [state, dispatch] = useMultistate({

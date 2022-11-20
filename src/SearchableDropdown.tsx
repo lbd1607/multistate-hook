@@ -1,6 +1,10 @@
 import React from "react";
 import Select, { StylesConfig } from "react-select";
-import { ValueLabelPair } from "./Form";
+
+export type ValueLabelPair = {
+  value: string;
+  label: string;
+};
 
 const SearchableDropdown = ({
   fieldLabel,
