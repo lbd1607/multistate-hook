@@ -1,16 +1,23 @@
 import React from "react";
 import Select, { StylesConfig } from "react-select";
-
-type ValueLabelPair = { value: string; label: string };
+import { ValueLabelPair } from "./Form";
 
 const SearchableDropdown = ({
   fieldLabel,
   options,
   id,
+  onChange,
+  value,
+  isMulti,
+  isDisabled,
 }: {
   fieldLabel: string;
   options: Array<ValueLabelPair>;
   id: string;
+  onChange: any;
+  value: ValueLabelPair;
+  isMulti?: boolean;
+  isDisabled?: boolean;
 }) => {
   const customDropdownStyles: StylesConfig = {
     control: (provided) => ({
@@ -19,15 +26,20 @@ const SearchableDropdown = ({
     }),
   };
   return (
-    <div className="selection-wrapper">
+    <div className="formfield-wrapper">
       <label className="label" htmlFor={id}>
         {fieldLabel}
       </label>
       <Select
         className="dropdown"
-        id="ice-creams"
+        id="sandwiches"
         options={options}
         styles={customDropdownStyles}
+        onChange={onChange}
+        value={value.value !== "" && value}
+        defaultValue={value}
+        isMulti={isMulti}
+        isDisabled={isDisabled}
       />
     </div>
   );
