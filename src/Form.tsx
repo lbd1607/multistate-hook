@@ -1,47 +1,8 @@
 import React from "react";
+import { emptySelection, categories } from "./data";
 import TextInput from "./Input";
 import SearchableDropdown, { ValueLabelPair } from "./SearchableDropdown";
 import useMultistate from "./useMultistate";
-
-const BREADS = [
-  { value: "White", label: "White" },
-  { value: "Wheat", label: "Wheat" },
-  { value: "Gluten-free wrap", label: "Gluten-free wrap" },
-];
-const MEATS = [
-  { value: "Hamburger", label: "Hamburger" },
-  { value: "Shredded chicken", label: "Shredded chicken" },
-  { value: "BBQ pork", label: "BBQ pork" },
-];
-const PLANT_BASED_ENTREES = [
-  { value: "Black bean burger", label: "Black bean burger" },
-  { value: "Shredded portabella", label: "Shredded portabella" },
-  { value: "BBQ tempeh", label: "BBQ tempeh" },
-];
-const CHEESES = [
-  { value: "Cheddar", label: "Cheddar" },
-  { value: "Swiss", label: "Swiss" },
-  { value: "Pepper jack", label: "Pepper jack" },
-];
-const VEGETABLES = [
-  { value: "Lettuce", label: "Lettuce" },
-  { value: "Tomato", label: "Tomato" },
-  { value: "Onion", label: "Onion" },
-];
-
-const categories = {
-  breads: { fieldLabel: "Bread", options: BREADS },
-  meats: { fieldLabel: "Meat", options: MEATS },
-  plantBasedEntrees: {
-    fieldLabel: "Plant Based Entrees",
-    options: PLANT_BASED_ENTREES,
-  },
-  cheeses: { fieldLabel: "Cheese", options: CHEESES },
-  vegetables: { fieldLabel: "Vegetables", options: VEGETABLES },
-  name: "",
-};
-
-const emptySelection = { value: "", label: "" };
 
 const Form = () => {
   const [state, dispatch] = useMultistate({
@@ -67,6 +28,7 @@ const Form = () => {
   };
 
   const handleSubmit = () => {
+    //TODO: Put your submit behavior here
     handleReset();
   };
 
