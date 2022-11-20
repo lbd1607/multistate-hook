@@ -36,7 +36,7 @@ const SearchableDropdown = ({
       </label>
       <Select
         className="dropdown"
-        id="sandwiches"
+        id={id}
         options={options}
         styles={customDropdownStyles}
         onChange={onChange}
