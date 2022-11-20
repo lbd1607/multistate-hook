@@ -5,11 +5,13 @@ const TextInput = ({
   label,
   value,
   onChange,
+  isRequired,
 }: {
   id: string;
   label: string;
   value: string;
   onChange: any;
+  isRequired?: boolean;
 }) => {
   return (
     <div className="formfield-wrapper">
@@ -23,6 +25,7 @@ const TextInput = ({
         value={value}
         onChange={onChange}
         placeholder={"Enter your name ..."}
+        required={isRequired}
       />
     </div>
   );
