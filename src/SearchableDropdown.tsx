@@ -44,6 +44,7 @@ const SearchableDropdown = ({
         defaultValue={value}
         isMulti={isMulti}
         isDisabled={isDisabled}
+        closeMenuOnSelect={isMulti && false}
       />
     </div>
   );
