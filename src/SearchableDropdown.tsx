@@ -1,5 +1,6 @@
 import React from "react";
 import Select, { StylesConfig } from "react-select";
+import { emptySelection } from "./data";
 
 export type ValueLabelPair = {
   value: string;
@@ -40,7 +41,7 @@ const SearchableDropdown = ({
         options={options}
         styles={customDropdownStyles}
         onChange={onChange}
-        value={value.value !== "" && value}
+        value={value !== emptySelection && value}
         defaultValue={value}
         isMulti={isMulti}
         isDisabled={isDisabled}
